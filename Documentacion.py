@@ -6,6 +6,7 @@ class Usuario:
         self.numeroIdentificacion = numeroIdentificacion
         self.nombreCompleto = nombreCompleto
         self.anhoNacimiento = anhoNacimiento
+        self.paisOrigen = paisOrigen
         self.nombreContactoPaisOrigen = nombreContactoPaisOrigen
         self.nombreContactoPaisDestino = nombreContactoPaisDestino
         self.telefonoContactoPaisOrigen = telefonoContactoPaisOrigen
@@ -23,6 +24,8 @@ class Usuario:
         print(f"El número de identificación digitado de su País de origen es: {self.numeroIdentificacion}")
     def get_anhoNacimiento (self):
         print(f"Su año de nacimiento es: {self.anhoNacimiento}")
+    def get_paisOrigen (self):
+        print(f"Su país de origen es: {self.paisOrigen}")
     def get_nombreContactoPaisOrigen (self):
         print(f"El nombre de la persona que respalda su identidad en su país de origen es: {self.nombreContactoPaisOrigen}")
     def get_telefonoContactoPaisOrigen (self):
@@ -32,11 +35,11 @@ class Usuario:
     def get_telefonoContactoPaisDestino (self):
         print(f"El número de teléfono de la persona que respalda su identidad en el país de su destino: {self.telefonoContactoPaisDestino}")
     def get_reservaLugarDestino (self):
-        print(f"Digite el código de la reserva que tiene hecha en el lugar en donde se hospedará, si esta es un familiar escribir la misma palabra y si es otra particular escribir también dicha palabra: {self.reservaLugarDestino}")
+        print(f"El código de la reserva en donde se hospedará es (también puede ser familia o particular): {self.reservaLugarDestino}")
     def get_direccionLugarDestino (self):
-        print(f"Digite la dirección del lugar en donde se hospedará, el orden debe ser Ciudad, Barrio, Dirección: {self.direccionLugarDestino}")
+        print(f"La dirección del lugar en donde se hospedará es: {self.direccionLugarDestino}")
     def get_boletoSalida (self):
-        print(f"Digite el código del boleto que tomó ya sea de avión, barco o autobus: {self.boletoSalida}")
+        print(f"El código del boleto que usó es: {self.boletoSalida}")
 
 #Se definen las condiciones para la digitación de los datos del Usuario
     def set_tipoUsuario (self):
@@ -47,6 +50,8 @@ class Usuario:
         print(f"Digite el número de identificación del documento de su País de origen{self.numeroIdentificacion}")
     def set_anhoNacimiento (self):
         print(f"Digite su año de nacimiento: {self.anhoNacimiento}")
+    def set_paisOrigen (self):
+        print(f"Digite su país de origen: {self.paisOrigen}")
     def set_nombreContactoPaisOrigen (self):
         print(f"Digite el nombre completo de una persona que respalde su identidad en su país de origen, de preferencia un familiar: {self.nombreContactoPaisOrigen}")
     def set_telefonoContactoPaisOrigen (self):
@@ -54,9 +59,26 @@ class Usuario:
     def set_nombreContactoPaisDestino (self):
         print(f"Digite el nombre completo de una persona que respalde su identidad en el país de destino que se dirige, de preferencia un familiar: {self.nombreContactoPaisDestino}")
     def set_telefonoContactoPaisDestino (self):
-
+        print(f"El número de teléfono de la persona que respalda su identidad en el país de su destino: {self.telefonoContactoPaisDestino}")
     def set_reservaLugarDestino (self):
-
+        print(f"Digite el código de la reserva que tiene hecha en el lugar en donde se hospedará, si esta es un familiar escribir la misma palabra y si es otra particular escribir también dicha palabra: {self.reservaLugarDestino}")
     def set_direccionLugarDestino (self):
-
+        print(f"Digite la dirección del lugar en donde se hospedará, el orden debe ser Ciudad, Barrio, Dirección: {self.direccionLugarDestino}")
     def set_boletoSalida (self):
+        print(f"Digite el código del boleto que tomó ya sea de avión, barco o autobus: {self.boletoSalida}")
+        
+        
+Usuario.set_tipoUsuario()
+Usuario.set_numeroPasaporte()
+Usuario.set_tipoUsuario()
+Usuario.set_tipoUsuario()
+Usuario.set_tipoUsuario()
+Usuario.set_tipoUsuario()
+Usuario.set_tipoUsuario()
+Usuario.set_tipoUsuario()
+Usuario.set_tipoUsuario()
+Usuario.set_tipoUsuario()
+Usuario.set_tipoUsuario()
+Usuario.set_tipoUsuario()
+Usuario.set_tipoUsuario()
+Usuario.set_tipoUsuario()
