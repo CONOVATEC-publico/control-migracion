@@ -29,4 +29,4 @@ for _ in range(cantidad_usuarios):
     usuarios.append(usuario)
 
 # Imprimir el número de usuarios generados
-print("Se generaron" + Usuario.numeroUsuario + "usuarios.")
+print("Se generaron", Usuario.numeroUsuario, "usuarios.")
