@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "control-migracion"
+version = "0.1.0"
+description = "Proyecto de bootcamp Int. a la Programacion con Python"
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "control_migracion"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
