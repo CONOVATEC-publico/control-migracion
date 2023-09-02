@@ -32,7 +32,7 @@ flowchart TD
 ## Otra documentación
 
 1. [Data](docs/data.md)
-2. [Clases internas](docs/classes)
+2. [Clases internas](docs/classes.md)
 3. [Procesos](docs/processes.md)
 
 ---
