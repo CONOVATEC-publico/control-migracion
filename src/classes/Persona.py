@@ -1,11 +1,20 @@
 class Persona:
-  def __init__(self, nombres, apellidos, genero, fecha_nacimiento, dni,
-                nacionalidad, direccion, telefono):
+  def __init__(
+      self, 
+      nombres, 
+      apellidos, 
+      genero, 
+      fechaNacimiento, 
+      numeroIdentificacion,
+      nacionalidad, 
+      direccion, 
+      telefono
+    ):
     self.nombres = nombres
     self.apellidos = apellidos
     self.genero = genero
-    self.fecha_nacimiento = fecha_nacimiento
-    self.dni = dni
+    self.fechaNacimiento = fechaNacimiento
+    self.numeroIdentificacion = numeroIdentificacion
     self.nacionalidad = nacionalidad
     self.direccion = direccion
     self.telefono = telefono
@@ -29,16 +38,22 @@ class Persona:
     self.genero = genero
 
   def getFechaNacimiento(self):
-    return self.fecha_nacimiento
+    return self.fechaNacimiento
   
-  def setFechaNacimiento(self, fecha_nacimiento):
-    self.fecha_nacimiento = fecha_nacimiento
+  def setFechaNacimiento(self, fechaNacimiento):
+    self.fechaNacimiento = fechaNacimiento
 
-  def getDni(self):
-    return self.dni
+  def getNumeroIdentificacion(self):
+    return self.numeroIdentificacion
   
-  def setDni(self, dni):
-    self.dni = dni
+  def setNumeroIdentificacion(self, numeroIdentificacion):
+    self.numeroIdentificacion = numeroIdentificacion
+
+  # def getNumeroPasaporte(self):
+  #   return self.numeroPasaporte
+  
+  # def setNumeroPasaporte(self, numeroPasaporte):
+  #   self.numeroPasaporte = numeroPasaporte
 
   def getNacionalidad(self):
     return self.nacionalidad

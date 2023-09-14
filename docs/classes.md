@@ -13,10 +13,8 @@ classDiagram
     Migrant <|-- MigrantAccepted
 
     class abstractPerson{
-        +String primerNombre
-        +String segundoNombre
-        +String primerApellido
-        +String segundoApellido
+        +String nombres
+        +String apellidos
         +String genero
         +Date fechaNacimiento
         +String numeroIdentificacion
@@ -52,7 +50,6 @@ classDiagram
         +Int rank
         +String pais
         +Float indicePaz
-        +String nacionalidad
     }
 ```
 

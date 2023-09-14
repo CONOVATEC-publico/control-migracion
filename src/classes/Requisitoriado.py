@@ -1,6 +1,6 @@
-from classes.Persona import Persona
+from Persona import Persona
+from gestionData.AbstractDDBB import AbstractDDBB
 from datetime import datetime
-
 
 class Requisitoriado(Persona):
     def __init__(
@@ -8,8 +8,8 @@ class Requisitoriado(Persona):
         nombres,
         apellidos,
         genero,
-        fecha_nacimiento,
-        dni,
+        fechaNacimiento,
+        numeroIdentificacion,
         nacionalidad,
         direccion,
         telefono,
@@ -19,8 +19,8 @@ class Requisitoriado(Persona):
             nombres,
             apellidos,
             genero,
-            fecha_nacimiento,
-            dni,
+            fechaNacimiento,
+            numeroIdentificacion,
             nacionalidad,
             direccion,
             telefono,
@@ -40,7 +40,7 @@ requisitoriado_list = [
         "Gutierrez Garcia",
         "Hombre",
         datetime(1996, 12, 4),
-        "00000000",
+        "00000001",
         "El Salvador",
         "Sin Datos",
         "Sin Datos",
@@ -51,7 +51,7 @@ requisitoriado_list = [
         "CHIRI ROMERO",
         "Hombre",
         datetime(1985, 11, 10),
-        "00000000",
+        "00000002",
         "Bolivia",
         "Sin Datos",
         "Sin Datos",
@@ -62,7 +62,7 @@ requisitoriado_list = [
         "DE ABREU VIDAL FILHO",
         "Hombre",
         datetime(1994, 1, 3),
-        "00000000",
+        "00000003",
         "Brasil",
         "Sin Datos",
         "Sin Datos",
@@ -73,7 +73,7 @@ requisitoriado_list = [
         "HANNOUN",
         "Hombre",
         datetime(1989, 5, 16),
-        "00000000",
+        "00000004",
         "Francia",
         "Sin Datos",
         "Sin Datos",
@@ -84,7 +84,7 @@ requisitoriado_list = [
         "PRZYSIUDA",
         "Hombre",
         datetime(1971, 4, 2),
-        "00000000",
+        "00000005",
         "Polonia",
         "Sin Datos",
         "Sin Datos",
@@ -95,7 +95,7 @@ requisitoriado_list = [
         "RIBEIRO",
         "Mujer",
         datetime(1976, 7, 18),
-        "00000000",
+        "00000006",
         "Brasil",
         "Sin Datos",
         "Sin Datos",
@@ -106,7 +106,7 @@ requisitoriado_list = [
         "GOROSITO PEREZ",
         "Hombre",
         datetime(1983, 3, 22),
-        "00000000",
+        "00000007",
         "Bolivia",
         "Sin Datos",
         "Sin Datos",
@@ -117,7 +117,7 @@ requisitoriado_list = [
         "RIFFI",
         "Hombre",
         datetime(1986, 2, 10),
-        "00000000",
+        "00000008",
         "Argelia",
         "Sin Datos",
         "Sin Datos",
@@ -128,7 +128,7 @@ requisitoriado_list = [
         "ESPINOZA CONDORI",
         "Hombre",
         datetime(1989, 11, 17),
-        "00000000",
+        "00000009",
         "Bolivia",
         "Sin Datos",
         "Sin Datos",
@@ -139,7 +139,7 @@ requisitoriado_list = [
         "PINTO GONZALEZ",
         "Hombre",
         datetime(1995, 10, 10),
-        "00000000",
+        "00000010",
         "Guatemala",
         "Sin Datos",
         "Sin Datos",
@@ -150,7 +150,7 @@ requisitoriado_list = [
         "ZEAS MENDOZA",
         "Hombre",
         datetime(1998, 12, 4),
-        "00000000",
+        "00000011",
         "Nicaragua",
         "Sin Datos",
         "Sin Datos",
@@ -161,7 +161,7 @@ requisitoriado_list = [
         "HERNANDEZ CASTRO",
         "Hombre",
         datetime(2001, 5, 25),
-        "00000000",
+        "00000012",
         "Nicaragua",
         "Sin Datos",
         "Sin Datos",
@@ -172,7 +172,7 @@ requisitoriado_list = [
         "DE CARVALHO MELO QUIRINO DE MORAIS",
         "Hombre",
         datetime(1980, 5, 2),
-        "00000000",
+        "00000013",
         "Brasil",
         "Sin Datos",
         "Sin Datos",
@@ -183,7 +183,7 @@ requisitoriado_list = [
         "SANGWAN",
         "Hombre",
         datetime(1994, 11, 10),
-        "00000000",
+        "00000014",
         "India",
         "Sin Datos",
         "Sin Datos",
@@ -194,7 +194,7 @@ requisitoriado_list = [
         "SINGH",
         "Hombre",
         datetime(1990, 6, 6),
-        "00000000",
+        "00000015",
         "India",
         "Sin Datos",
         "Sin Datos",
@@ -205,7 +205,7 @@ requisitoriado_list = [
         "CARDONA CABRERA",
         "Hombre",
         datetime(1978, 11, 11),
-        "00000000",
+        "00000016",
         "Guatemala",
         "Sin Datos",
         "Sin Datos",
@@ -216,7 +216,7 @@ requisitoriado_list = [
         "ABREGO FUENTES",
         "Hombre",
         datetime(1998, 4, 26),
-        "00000000",
+        "00000017",
         "El Salvador",
         "Sin Datos",
         "Sin Datos",
@@ -227,7 +227,7 @@ requisitoriado_list = [
         "CORTEZ LOPEZ",
         "Hombre",
         datetime(1974, 3, 10),
-        "00000000",
+        "00000018",
         "Nicaragua",
         "Sin Datos",
         "Sin Datos",
@@ -238,7 +238,7 @@ requisitoriado_list = [
         "ANGEL FLORES",
         "Hombre",
         datetime(1997, 5, 6),
-        "00000000",
+        "00000020",
         "El Salvador",
         "Sin Datos",
         "Sin Datos",
@@ -249,7 +249,7 @@ requisitoriado_list = [
         "GUEVARA PAZ",
         "Hombre",
         datetime(1976, 11, 8),
-        "00000000",
+        "00000021",
         "El Salvador",
         "Sin Datos",
         "Sin Datos",
@@ -260,7 +260,7 @@ requisitoriado_list = [
         "ESCOBAR SÁNCHEZ",
         "Hombre",
         datetime(1985, 12, 2),
-        "00000000",
+        "00000022",
         "El Salvador",
         "Sin Datos",
         "Sin Datos",
@@ -271,7 +271,7 @@ requisitoriado_list = [
         "IBARRA MARTINEZ",
         "Hombre",
         datetime(1956, 6, 16),
-        "00000000",
+        "00000023",
         "Bolivia",
         "Sin Datos",
         "Sin Datos",
@@ -282,7 +282,7 @@ requisitoriado_list = [
         "MENDOZA BELTRAN",
         "Hombre",
         datetime(1980, 1, 10),
-        "00000000",
+        "00000024",
         "Bolivia",
         "Sin Datos",
         "Sin Datos",
@@ -293,7 +293,7 @@ requisitoriado_list = [
         "BOUGUETTAIA",
         "Hombre",
         datetime(1987, 6, 29),
-        "00000000",
+        "00000025",
         "Francia",
         "Sin Datos",
         "Sin Datos",
@@ -301,4 +301,44 @@ requisitoriado_list = [
     ),
 ]
 
-print(len(requisitoriado_list))
+data = []
+
+for requisitoriado in requisitoriado_list:
+    req = [
+        requisitoriado.getNombres().title(),
+        requisitoriado.getApellidos().title(),
+        requisitoriado.getGenero(),
+        requisitoriado.getFechaNacimiento().strftime("%d/%m/%Y"),
+        requisitoriado.getNumeroIdentificacion(),
+        requisitoriado.getNacionalidad(),
+        requisitoriado.getDireccion(),
+        requisitoriado.getTelefono(),
+        requisitoriado.getCargos().capitalize()
+    ]
+    data.append(req)
+
+#pushear toda la data al csv
+#AbstractDDBB("required_person.csv").pushData(data)
+
+#crear nuevo requisitoriado
+#AbstractDDBB("required_person.csv").createObject(["test nombre","test ap","Hombre", "09/05/2000", "74610635",
+#    "Peruano","direc","tel","cargos"
+#])
+#AbstractDDBB("required_person.csv").deleteObject("74610635",4)
+
+#actualizar lista por documento de identidad
+#AbstractDDBB("required_person.csv").updateObject(["test nom","Ap","Hombre", "09/05/2000", "12345678",
+#    "Pe","direc","tel","cargos"
+#],"12345678",4)
+
+#print(AbstractDDBB("required_person.csv").getObject("12345678",4))
+
+#obtener lista
+#lista = AbstractDDBB("required_person.csv").getAll()
+
+#imprimir lista
+#for row in lista:
+    #print(row)
+
+
+
